@@ -32,3 +32,5 @@ package-mode = false
 
 [tool.taskipy.tasks]
 format = "isort . && black ."
+test = "poetry run pytest -v"
+run = "python src/main.py"

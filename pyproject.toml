@@ -17,7 +17,9 @@ dependencies = [
     "flake8 (>=7.3.0,<8.0.0)",
     "isort (>=8.0.1,<9.0.0)",
     "pytest (>=9.0.3,<10.0.0)",
-    "requests (>=2.34.2,<3.0.0)"
+    "requests (>=2.34.2,<3.0.0)",
+    "pip-audit (>=2.10.0,<3.0.0)",
+    "taskipy (>=1.14.1,<2.0.0)"
 ]
 
 
@@ -27,3 +29,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 package-mode = false
+
+[tool.taskipy.tasks]
+format = "isort . && black ."

@@ -1,7 +1,6 @@
 from pipeline.extract import extract_from_excel
-from pipeline.transform import contact_data_frames
 from pipeline.load import load_excel
-
+from pipeline.transform import contact_data_frames
 
 if __name__ == "__main__":
 
@@ -15,11 +14,7 @@ if __name__ == "__main__":
 
     print(f"Total de registros consolidados: {len(data_frame)}")
 
-    resultado = load_excel(
-        data_frame,
-        "data/trusted",
-        "trusted"
-    )
+    resultado = load_excel(data_frame, "data/trusted", "trusted")
 
     print(resultado)
 

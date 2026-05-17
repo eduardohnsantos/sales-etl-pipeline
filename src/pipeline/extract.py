@@ -1,10 +1,7 @@
-import os #bilbioteca para manipular aquivos e diretórios
-import glob # biblioteca para listar arquivos
+import glob  # biblioteca para listar arquivos
+import os  # bilbioteca para manipular aquivos e diretórios
 
 import pandas as pd
-
-from typing import List
-
 
 """
 funçao para ler os aquivos de uma pasta
@@ -17,6 +14,7 @@ return: lista de dataframes
 
 path = "data/raw"
 
+
 def extract_from_excel(path: str) -> list[pd.DataFrame]:
     all_files = glob.glob(os.path.join(path, "*.xlsx"))
 
@@ -26,8 +24,7 @@ def extract_from_excel(path: str) -> list[pd.DataFrame]:
 
     return data_frame_list
 
+
 if __name__ == "__main__":
     data_frame_list = extract_from_excel(path)
     print(data_frame_list)
-
-

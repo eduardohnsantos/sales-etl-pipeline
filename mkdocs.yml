@@ -1,0 +1,28 @@
+site_name: Sales ETL Pipeline
+
+theme:
+  name: material
+
+  palette:
+    primary: blue
+    accent: blue
+
+  features:
+    - navigation.tabs
+    - navigation.instant
+
+repo_name: eduardohnsantos/sales-etl-pipeline
+repo_url: https://github.com/eduardohnsantos/sales-etl-pipeline
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]

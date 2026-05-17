@@ -19,7 +19,12 @@ dependencies = [
     "pytest (>=9.0.3,<10.0.0)",
     "requests (>=2.34.2,<3.0.0)",
     "pip-audit (>=2.10.0,<3.0.0)",
-    "taskipy (>=1.14.1,<2.0.0)"
+    "taskipy (>=1.14.1,<2.0.0)",
+    "mkdocs (>=1.6.1,<2.0.0)",
+    "mkdocstrings-python (>=2.0.3,<3.0.0)",
+    "pygments (>=2.20.0,<3.0.0)",
+    "mkdocs-material (>=9.7.6,<10.0.0)",
+    "pymdown-extensions (>=10.21.3,<11.0.0)"
 ]
 
 
@@ -34,3 +39,4 @@ package-mode = false
 format = "isort . && black ."
 test = "poetry run pytest -v"
 run = "python src/main.py"
+kill = "kill -9 $(lsof -t -i :8000)"

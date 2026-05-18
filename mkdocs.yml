@@ -1,4 +1,5 @@
 site_name: Sales ETL Pipeline
+site_url: https://eduardohnsantos.github.io/sales-etl-pipeline/
 
 theme:
   name: material

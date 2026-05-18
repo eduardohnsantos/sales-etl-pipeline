@@ -16,6 +16,7 @@ lojas = [
     "Loja Curitiba",
     "Loja Salvador",
     "Loja Recife",
+    "Loja Rio Grande do Sul",
 ]
 
 produtos = {

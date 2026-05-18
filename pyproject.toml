@@ -41,3 +41,8 @@ format = "isort . && black ."
 test = "poetry run pytest -v"
 run = "python src/main.py"
 kill = "kill -9 $(lsof -t -i :8000)"
+[dependency-groups]
+dev = [
+    "pre-commit (>=4.6.0,<5.0.0)",
+    "pydocstyle (>=6.3.0,<7.0.0)"
+]

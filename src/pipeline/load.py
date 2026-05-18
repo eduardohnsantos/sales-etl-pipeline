@@ -1,24 +1,33 @@
+"""Módulo responsável pela carga de dados tratados."""
+
 import os
 
 import pandas as pd
 
-"""
-receber um dataframe e salvar em um arquivo excel
 
-args:
-data_frame (pd.DataFrame): dataframe a ser salvo
-output_path (str): caminho onde o arquivo excel será salvo
-file_name (str): nome do arquivo excel a ser salvo
+def load_excel(
+    data_frame: pd.DataFrame,
+    output_path: str,
+    file_name: str,
+) -> str:
+    """
+    Salva um DataFrame em um arquivo Excel.
 
-return: "Arquivo salvo com sucesso!" ou "Erro ao salvar o arquivo: {error}"
-"""
+    Args:
+        data_frame (pd.DataFrame):
+            DataFrame a ser salvo.
 
+        output_path (str):
+            Caminho onde o arquivo Excel será salvo.
 
-def load_excel(data_frame: pd.DataFrame, output_path: str, file_name: str) -> str:
+        file_name (str):
+            Nome do arquivo Excel.
 
+    Returns:
+        str:
+            Mensagem de sucesso ou erro durante o salvamento.
+    """
     try:
-
-        # cria a pasta caso não exista
         os.makedirs(output_path, exist_ok=True)
 
         output_file = f"{output_path}/{file_name}.xlsx"
@@ -27,6 +36,5 @@ def load_excel(data_frame: pd.DataFrame, output_path: str, file_name: str) -> st
 
         return f"Arquivo salvo com sucesso em: {output_file}"
 
-    except Exception as e:
-
-        return f"Erro ao salvar o arquivo: {e}"
+    except Exception as error:
+        return f"Erro ao salvar o arquivo: {error}"

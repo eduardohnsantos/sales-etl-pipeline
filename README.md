@@ -1,7 +1,7 @@
 # 🚀 Sales ETL Pipeline
 
 <p align="center">
-  <img src="docs/assets/sales-etl-pipeline-banner.png" alt="Sales ETL Pipeline Banner" width="100%">
+  <img src="./docs/assets/sales-etl-pipeline-banner.png" alt="Sales ETL Pipeline Banner">
 </p>
 
 ## 📌 Sobre o Projeto
